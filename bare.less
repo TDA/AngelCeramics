@@ -1,0 +1,215 @@
+/* rgb(46, 138, 49) - parrot green
+	rgb(43, 114, 130) - light blue
+	rgb(48, 129, 145)- lighter blue
+	rgb(34, 103, 57) - dark green
+	rgb(41, 78, 122) - darkbright blue
+	rgb(52, 112, 157) - bright light blue
+	*/	
+/* Font import */
+.font(@fontname:~""){
+
+	@font-face {
+    font-family: @fontname;
+	    src: url('Fonts/@{fontname}-webfont.eot');
+	    src: url('Fonts/@{fontname}-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('Fonts/@{fontname}-webfont.woff') format('woff'),
+		 url('Fonts/@{fontname}-webfont.ttf') format('truetype'),
+         url('Fonts/@{fontname}-webfont.svg#@{fontname}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+
+	}
+	
+}
+
+
+/* Border Radius function */
+.round(@rad:2){
+-webkit-border-radius:@rad;
+-moz-border-radius:@rad;
+border-radius:@rad;
+}
+
+/* Transform function */
+.trfn(@rotate:0,@scale:1,@transX:0px,@transY:0px){
+-webkit-transform: rotate(@rotate) scale(@scale) translate(@transX,@transY);
+-moz-transform:rotate(@rotate) scale(@scale) translate(@transX,@transY);
+-ms-transform:rotate(@rotate) scale(@scale) translate(@transX,@transY);
+-o-transform:rotate(@rotate) scale(@scale) translate(@transX,@transY);
+transform:rotate(@rotate) scale(@scale) translate(@transX,@transY);	
+}
+
+/* Transform rotateX function */
+.trfnRotX(@rotX){
+	-webkit-transform: rotateX(@rotX);
+	-moz-transform: rotateX(@rotX);
+	-ms-transform: rotateX(@rotX);
+	-o-transform: rotateX(@rotX);
+	transform: rotateX(@rotX);
+	}
+
+/* Transform rotateY function */
+.trfnRotY(@rotY){
+	-webkit-transform: rotateY(@rotY);
+	-moz-transform: rotateY(@rotY);
+	-ms-transform: rotateY(@rotY);
+	-o-transform: rotateY(@rotY);
+	transform: rotateY(@rotY);
+	}
+	
+/* Transform rotateZ function */
+.trfnRotZ(@rotZ){
+	-webkit-transform: rotateZ(@rotZ);
+	-moz-transform: rotateZ(@rotZ);
+	-ms-transform: rotateZ(@rotZ);
+	-o-transform: rotateZ(@rotZ);
+	transform: rotateZ(@rotZ);
+	}
+
+/* Transition function */
+.trans(@prop:all,@duration:1s,@fn:ease,@delay:0s){
+-webkit-transition: @prop @duration @fn @delay;
+-moz-transition: @prop @duration @fn @delay;
+-ms-transition: @prop @duration @fn @delay;
+-o-transition: @prop @duration @fn @delay;
+transition: @prop @duration @fn @delay;
+}
+
+/* Box shadow  not @inset:~'',*/
+.shadow(@horizontal:0, @vertical:1px,@spread:2px, @blur:2px,@red:0,@green:0,@blue:0,@alpha: 0.4) {
+  -webkit-box-shadow: @horizontal @vertical @spread @blur rgba(@red, @green, @blue, @alpha);
+  -moz-box-shadow: @horizontal @vertical @spread @blur rgba(@red, @green, @blue, @alpha);
+  box-shadow: @horizontal @vertical @spread @blur rgba(@red, @green, @blue, @alpha);
+}
+
+/*Simple Gradient PS:BOTTOM TO TOP*/
+.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+  background: @color;
+  background: -webkit-gradient(linear,
+                               left bottom,
+                               left top,
+                               color-stop(0, @start),
+                               color-stop(1, @stop));
+  background: -ms-linear-gradient(bottom,
+                                  @start,
+                                  @stop);
+  background: -moz-linear-gradient(center bottom,
+                                   @start 0%,
+                                   @stop 100%);
+  background: -o-linear-gradient(@stop,
+                                 @start);
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@stop,@start));
+}
+
+/* pagefull */
+.pagefull(){
+	html,body,.page{
+		width:100%;
+		height:100%;
+	}
+	.page{
+		min-width:100%;
+		min-height:100%;
+		margin:0;
+		}
+
+}
+/* Navigation */
+.setHorNav(@width:100%,@bgcolor:#000,@color:#fff,@pos:static){
+	
+nav {
+width:@width;
+background:@bgcolor;
+position:@pos;
+top:0;
+z-index:9;
+margin:0 ((100%-@width)/2);
+}
+
+nav ul{
+list-style:none;
+width:80%;
+margin:0 auto;
+text-align:center;
+}
+
+nav ul li{
+display:inline-block;
+min-width:80px;
+min-height:40px;
+margin-right:20px;
+color:@color;
+font-variant:small-caps;
+}
+
+nav ul li a{
+display:inline-block;
+text-decoration:none;
+color:inherit;
+padding:5px;
+min-height:30px;
+line-height:30px;
+-webkit-transition:color 0.8s ease;
+-moz-transition:color 0.8s ease;
+-ms-transition:color 0.8s ease;
+-o-transition:color 0.8s ease;
+transition:color 0.8s ease;
+}
+
+
+}
+/* Navigation Over*/
+
+/* Multicolumn Fluid Layout
+.columns(@colwidth: 100%, @colcount: 1, @colgap: 1em, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px) {
+	
+	width:@colwidth;
+	border-left:@columnRuleStyle @columnRuleWidth @columnRuleColor;
+	margin-left:@colgap;
+	display:inline-block;
+}
+*/
+
+/*Headings settings */
+.headings(@h1:8,@h2:4,@h3:2.5,@font:"open sans"){
+h1{font-family: @font;
+font-size:~'@{h1}em';
+font-size:~'@{h1}rem';
+line-height:1.2em;
+text-align:center;
+margin:-0.0001em 0;
+
+}
+
+
+h2{
+font-family: @font;
+font-size:~'@{h2}em';
+font-size:~'@{h2}rem';
+margin:-.0001em 0;
+padding:.25em 0;
+}
+
+h2+span{
+	@span:@h2/2;
+	padding-left:~'@{span}em';
+	font-size:~'@{span}em';
+	font-size:~'@{span}rem';
+	
+}
+
+h3{
+	font-size:~'@{h3}em';
+	font-size:~'@{h3}rem';
+	padding-left:2.5em;
+	
+}
+}
+
+.setFooter(@width,@bg,@color){
+	width:@width;
+	background:@bg;
+	color:@color;	
+	}
+	

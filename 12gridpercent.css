@@ -1,0 +1,26 @@
+body{
+width:100%;
+height:auto;
+margin:20px auto;
+}
+#container{
+width:93.75%;
+margin:0 auto;
+max-width:1200px;
+}
+.column{
+display:inline-block;
+vertical-align:top;
+margin-left:1.15%;
+}
+.col_12 {width:96%;display:block;margin:0 auto;}
+.col_9 {width:72%;}
+.col_8 {width:64%;}
+.col_6 {width:48%;}
+.col_4 {width:32%;}
+.col_3 {width:24%;}
+
+@media screen and (max-width:640px){
+#container{width:100%;}	
+.column,.col_12{display:block;width:98%;margin:0 auto;}
+}

@@ -1,0 +1,29 @@
+/* rgb(46, 138, 49) - parrot green
+	rgb(43, 114, 130) - light blue
+	rgb(48, 129, 145)- lighter blue
+	rgb(34, 103, 57) - dark green
+	rgb(41, 78, 122) - darkbright blue
+	rgb(52, 112, 157) - bright light blue
+	*/
+/* Font import */
+/* Border Radius function */
+/* Transform function */
+/* Transform rotateX function */
+/* Transform rotateY function */
+/* Transform rotateZ function */
+/* Transition function */
+/* Box shadow  not @inset:~'',*/
+/*Simple Gradient PS:BOTTOM TO TOP*/
+/* pagefull */
+/* Navigation */
+/* Navigation Over*/
+/* Multicolumn Fluid Layout
+.columns(@colwidth: 100%, @colcount: 1, @colgap: 1em, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px) {
+	
+	width:@colwidth;
+	border-left:@columnRuleStyle @columnRuleWidth @columnRuleColor;
+	margin-left:@colgap;
+	display:inline-block;
+}
+*/
+/*Headings settings */
